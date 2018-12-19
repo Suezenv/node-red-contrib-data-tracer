@@ -1,0 +1,57 @@
+<script type="text/javascript">
+    RED.nodes.registerType('data-tracer', {
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: { value: '' },
+            prop: {value: '' },
+            flowName: { value: '', required: true },
+            dataProp: { value: '' },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: 'file.png',
+        label: function() {
+            return this.name || 'data-tracer';
+        },
+    });
+</script>
+
+<script type="text/x-red" data-template-name="data-tracer">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input class="class="input-block-level" type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-prop"><i class="fa fa-ellipsis-h"></i> Property</label>
+        <input class="input-block-level" type="text" id="node-input-prop" placeholder="payload">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-flowName"><i class="fa fa-info"></i> Flow name</label>
+        <input class="input-block-level" type="text" id="node-input-flowName" placeholder="example">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-dataProp"><i class="fa fa-info"></i> Target property</label>
+        <input class="input-block-level" type="text" id="node-input-dataProp" placeholder="_metadata">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="data-tracer">
+    <p>A simple node that add ETL metadata to a given object.</p>
+    <p>Exempli gratia:</p>
+    <p><pre><code>
+{
+    id: 123456,
+    // ...
+    _metadata: {
+        importedAt: '1545140416900',
+        collector: 'forecast-getter',
+        enricher: 'forecast-enricher',
+        stocker: 'forecast-stockeri',
+    }
+}
+    </code></pre></p>
+</script>
