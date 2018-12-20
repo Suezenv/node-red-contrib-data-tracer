@@ -2,17 +2,23 @@
   "name": "@3slab/node-red-contrib-data-tracer",
   "version": "0.1.0",
   "description": "NodeRed node that adds metadata about who and when the data has been treated",
-  "author": "",
+  "author": "3slab",
   "license": "MIT",
   "keywords": [
     "node-red"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha \"test/**/*_spec.js\""
   },
   "node-red": {
     "nodes": {
       "data-tracer": "data-tracer/data-tracer.js"
     }
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "node-red": "^0.19.5",
+    "node-red-node-test-helper": "^0.1.8",
+    "should": "^13.2.3"
   }
 }
