@@ -5,8 +5,15 @@
   "author": "3slab",
   "license": "MIT",
   "keywords": [
-    "node-red"
+    "node-red",
+    "log",
+    "metadata",
+    "enricher"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Suezenv/node-red-contrib-data-tracer"
+  },
   "scripts": {
     "test": "mocha \"test/**/*_spec.js\""
   },
