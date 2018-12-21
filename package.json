@@ -1,5 +1,5 @@
 {
-  "name": "@3slab/node-red-contrib-data-tracer",
+  "name": "node-red-contrib-data-tracer",
   "version": "0.1.0",
   "description": "NodeRed node that adds metadata about who and when the data has been treated",
   "author": "3slab",
